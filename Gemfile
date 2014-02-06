@@ -4,8 +4,10 @@ gem 'rails', '3.2.15'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+  gem 'letter_opener'
+end
 
 gem 'pg'
 # Gems used only for assets and not required
@@ -33,7 +35,6 @@ gem 'jbuilder'
 
 gem 'backbone-on-rails'
 
-gem 'letter_opener', :group => :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
