@@ -1,3 +1,3 @@
 class Sale < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :quantity, :type, :unit
 end
