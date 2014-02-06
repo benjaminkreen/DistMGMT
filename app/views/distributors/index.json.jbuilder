@@ -6,7 +6,7 @@ json.distributors do
       json.(account, :name, :city, :state, :contact, :opportunities)
       json.sales do
         json.array!(account.sales) do |sale|
-          json.(sale, :quantity, :unit, :type)
+          json.(sale, :id, :quantity, :unit, :type)
         end
       end
     end
