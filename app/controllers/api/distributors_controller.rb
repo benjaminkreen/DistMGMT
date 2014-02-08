@@ -1,4 +1,4 @@
-class DistributorsController < ApplicationController
+class Api::DistributorsController < ApplicationController
   def index
     @user = current_user
     render "index"

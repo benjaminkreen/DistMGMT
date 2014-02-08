@@ -9,6 +9,8 @@ group :development do
   gem 'letter_opener'
 end
 
+gem 'faker'
+
 gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
