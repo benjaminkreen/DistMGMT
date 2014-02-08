@@ -1,0 +1,27 @@
+<div class="col-md-12 col-xs-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Distributors</h4>
+    </div>
+    
+    <div class="panel-group" id="accordion">
+      <% distributors.each(function(dist){ %>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= dist.id %>">
+              <%= dist.escape('rep') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapse<%= dist.id %>" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>Telephone: <%= dist.escape('telephone') %> </p>
+            <p>Email: <%= dist.escape('email') %></p>
+          </div>
+        </div>
+      </div>
+          <% }); %>
+    </div>
+  </div>
+</div>

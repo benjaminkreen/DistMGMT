@@ -9,7 +9,9 @@ DistMGMT.Routers.Distributors = Backbone.Router.extend({
   },
   
   root: function(){
-    view = new DistMGMT.Views.root();
+    view = new DistMGMT.Views.DistributorsIndex({
+      collection: DistMGMT.sessionDist
+    });
     this._swapView(view);
   },
   
