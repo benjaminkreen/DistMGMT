@@ -1,6 +1,13 @@
 ActiveRecord::Base.transaction do
   
+  User.create!({
+    :email => "test@test.com",
+    :password => "password",
+    :company_id => 1
+  })
+  
   Company.create!(:name => "Everbrew")
+  
   3.times do
     Distributor.create!(
       :rep => Faker::Name.name,

@@ -5,7 +5,11 @@ DistMGMT.Routers.Distributors = Backbone.Router.extend({
   
   routes: {
     "" : "root",
-    "distributor" : "distIndex"
+    "distributor/new" : "newDistributor",
+    "account/new" : "newAccount",
+    "sale/new": "newSale",
+    "account/:id" : "account",
+    "sale/:id": "sale"
   },
   
   root: function(){
@@ -13,6 +17,10 @@ DistMGMT.Routers.Distributors = Backbone.Router.extend({
       collection: DistMGMT.sessionDist
     });
     this._swapView(view);
+  },
+  
+  newDistributor: function(){
+    console.log("new Distributor link");
   },
   
   _swapView: function(view){
