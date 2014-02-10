@@ -1,0 +1,29 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><%= model.escape('rep') %></div>
+    <div class="panel-body">
+      <p>Telephone: <%= model.escape('telephone') %> </p>
+      <p>Email: <%= model.escape('email') %></p>
+      
+    </div>
+
+    <!-- Table -->
+    <table class="table table-striped">
+      <tr>
+        <th>Account Name</th>
+        <th>Contact</th>
+        <th>Location</th>
+        <th>View</th>
+      </tr>
+      <% model.get('accounts').each(function(acct){ %>
+        <tr>
+          <td><%= acct.escape('name') %></td>
+          <td><%= acct.escape('contact') %></td>
+          <td><%= acct.escape('city') %>, <%= acct.escape('state') %></td>
+          <td><a href=""><%= acct.id %></a></td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+</div>

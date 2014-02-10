@@ -8,13 +8,21 @@ DistMGMT.Routers.Distributors = Backbone.Router.extend({
     "distributor/new" : "newDistributor",
     "account/new" : "newAccount",
     "sale/new": "newSale",
-    "account/:id" : "account",
-    "sale/:id": "sale"
+    "distributor/:id": "distributorShow",
+    "account/:id" : "accountShow",
+    "sale/:id": "saleShow"
   },
   
   root: function(){
     view = new DistMGMT.Views.DistributorsIndex({
       collection: DistMGMT.sessionDist
+    });
+    this._swapView(view);
+  },
+  
+  distributorShow: function(id){
+    view = new DistMGMT.Views.DistributorShow({
+      model: DistMGMT.sessionDist.get(id)
     });
     this._swapView(view);
   },

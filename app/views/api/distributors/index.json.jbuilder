@@ -1,6 +1,6 @@
 
   json.array!(@user.company.distributors.includes(:accounts)) do |distributor|
-    json.(distributor, :rep, :telephone, :email, :id)
+    json.(distributor, :company_name, :rep, :telephone, :email, :id)
     json.accounts do
       json.array!(distributor.accounts.includes(:sales)) do |account|
       json.(account, :id, :name, :city, :state, :contact, :opportunities)

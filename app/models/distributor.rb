@@ -6,4 +6,8 @@ class Distributor < ActiveRecord::Base
   accepts_nested_attributes_for :accounts
   
   belongs_to :company
+  
+  def company_name
+    self.company.name
+  end
 end
